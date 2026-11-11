@@ -7,9 +7,7 @@ const processes = [
   ["gateway", "server.js"],
   ["wake-up", "wake_up.js"],
   ["ntfy-in", "ntfy_in.js"]
-]
 ].map(([name, file]) => ({
-  name,
   child: spawn(process.execPath, [path.join(__dirname, file)], {
     cwd: __dirname,
     env: process.env,
